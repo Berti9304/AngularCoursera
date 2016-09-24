@@ -2,7 +2,7 @@
 
 angular.module('NarrowItDownApp')
 .service('MenuSearchService', MenuSearchService)
-.constant('BasePath', 'http://davids-restaurant.herokuapp.com/menu_items.json')
+.constant('BasePath', 'https://davids-restaurant.herokuapp.com/menu_items.json')
 
 MenuSearchService.$inject = ['$http','BasePath'];
 function MenuSearchService($http,BasePath){
