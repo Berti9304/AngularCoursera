@@ -10,19 +10,25 @@
    var service = this;
 
    service.getAllCategories = function(){
+
      var response = $http({
        method: "GET",
        url: "https://davids-restaurant.herokuapp.com/categories.json"
      });
-
+     console.log(response);
      return response;
    }
 
-   service.getItemsForCategory(categoryShortName) = function(){
-
-    //TODO
-
+   service.getItemsForCategory = function(categoryShortName){
+     var itemsResponse = $http({
+       method: "GET",
+       url: 'https://davids-restaurant.herokuapp.com/menu_items.json?category=' + categoryShortName
+     });
+     console.log(itemsResponse);
+     return itemsResponse;
    }
+
+
  }
 
 

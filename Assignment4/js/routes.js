@@ -11,7 +11,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider){
 
   $stateProvider
 
-  .state('home',{
+.state('home',{
 
      url:'/',
      templateUrl: 'src/home.template.html'
@@ -24,10 +24,23 @@ function RoutesConfig($stateProvider, $urlRouterProvider){
     controller: "categoriesController as categories",
     resolve: {
       myData: ['MenuDataService', function(MenuDataService){
-          return MenuDataService.getAllCategories();
-      }]
+        return MenuDataService.getAllCategories();
+    }]
     }
-  });
+  })
+
+.state('items', {
+  url:'/items/{shortName}',
+  templateUrl: 'src/items.html',
+  controller: "itemsController as itemsctrl",
+  resolve: {
+      items:  ['$stateParams','MenuDataService',function($stateParams, MenuDataService){
+          return  menuDataService.getItemsForCategory($stateParams.shortName)
+
+
+          }]
+       }
+   });
 }
 
 })();
