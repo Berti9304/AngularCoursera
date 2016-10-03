@@ -8,6 +8,7 @@ categoriesController.$inject = ['myData'];
 function categoriesController(myData){
   var categories = this;
    categories.myData = myData.data;
+  
 
 
 }

@@ -13,6 +13,7 @@ angular.module('MenuApp')
 itemCompController.$inject = ['$element'];
 function itemCompController($element){
  var $ctrl = this;
+ 
 
 }
 })();
