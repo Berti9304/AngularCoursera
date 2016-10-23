@@ -30,7 +30,7 @@ function SignUpController(SignUpService){
     else{
        $ctrl.updated = false;
        $ctrl.error = true;
-      console.log($ctrl.error);
+      
      }
 
    });

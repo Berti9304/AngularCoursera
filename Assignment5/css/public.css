@@ -4,9 +4,21 @@
   border: 2px solid #3F0C1F;
 }
 
-#signupid{
+#signupid input{ 
 color: black;
 }
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
+}
+
+.submitbutton{
+  color:black;
+}
+
 
 #menu-tile, #specials-tile, #map-tile {
   height: 250px;
